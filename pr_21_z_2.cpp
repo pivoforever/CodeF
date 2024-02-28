@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <clocale>
-#include <list>
+#include <vector>
 
 using namespace std;
 
@@ -11,15 +11,15 @@ struct product
     int quantity;
 };
 
-void acceptGoods(product []);
-void shipGoods(product []);
-void info(product []);
-int isGoodOnStock(product [], string);
+void acceptGoods(vector <product>);
+void shipGoods(vector <product>);
+void info(vector <product>);
+int isGoodOnStock(vector <product>, string);
 
 int main(int argc, char const *argv[])
 {
     setlocale(LC_ALL, "Russian");
-    product stock[100];
+    vector <product> stock={{"консервированный горошек", 10}};
     int n;
     cout<<"Веберите, что хотите сделать:"<<endl;
     cout<<"1 - принять товар на склад:"<<endl;
@@ -44,17 +44,18 @@ int main(int argc, char const *argv[])
     return 0;
 }
 
-int isGoodOnStock(product stock[], string name)
+int isGoodOnStock(vector <product> stock, string name)
 {
-    for(int i; i<100;i++)
+    int cnt=0;
+    for(product elem: stock)
     {
-        if (stock[i].name==name)
-        return i;
+        if (elem.name==name) return cnt;
+        cnt++;
     }
     return -1;
 }
 
-void acceptGoods(product stock[])
+void acceptGoods(vector <product> stock)
 {
     cout<<"Введите название товара:"<<endl;
     string name;
@@ -69,12 +70,17 @@ void acceptGoods(product stock[])
     }
     else
     {
-        /* code */
+        stock.push_back({name,addQuantity});
     }
     
 }
 
-void shipGoods(product [])
+void shipGoods(vector <product>)
 {}
-void info(product [])
-{}
+void info(vector <product> stock)
+{
+    for(product elem: stock)
+    {
+        cout<<elem.name<<" "<<elem.quantity<<endl;
+    }
+}
