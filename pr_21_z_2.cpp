@@ -19,8 +19,8 @@ int isGoodOnStock(vector<product>&, string);
 
 int main(int argc, char const* argv[])
 {
-    SetConsoleCP(1251);
-    SetConsoleOutputCP(1251);
+    //SetConsoleCP(1251);
+    //SetConsoleOutputCP(1251);
     vector<product> stock = { {"Консервированный горошек", 10} };
     int n;
     do
