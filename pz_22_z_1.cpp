@@ -11,9 +11,9 @@ void arrayMaxMin(int myArray[], int size, int *max, int *min);
 
 int main(int argc, char const *argv[])
 {
-    //setlocale(LC_ALL, "Russian");
-    SetConsoleCP(1251);
-    SetConsoleOutputCP(1251);
+    setlocale(LC_ALL, "Russian");
+    //SetConsoleCP(1251);
+    //SetConsoleOutputCP(1251);
     cout << "Введите размер массива:" << endl;
     int size, max, min;
     cin >> size;
