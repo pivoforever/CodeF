@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <Windows.h>
+#include <locale>
 #include <vector>
 #include <string>
 
@@ -19,6 +20,7 @@ int isGoodOnStock(vector<product>&, string);
 
 int main(int argc, char const* argv[])
 {
+    setlocale(LC_ALL, "Russian");
     //SetConsoleCP(1251);
     //SetConsoleOutputCP(1251);
     vector<product> stock = { {"Консервированный горошек", 10} };
