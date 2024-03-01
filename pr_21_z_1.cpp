@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <clocale>
+#include <Windows.h>
 
 using namespace std;
 
@@ -10,7 +11,9 @@ void help(int, int, int);
 
 int main(int argc, char const *argv[])
 {
-    setlocale(LC_ALL,"Russian");
+    SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+    //setlocale(LC_ALL,"Russian");
     int secret = 50, cnt = 0;
     compare(secret, cnt);
     return 0;
@@ -47,7 +50,7 @@ void help(int secret, int playerNumber, int cnt)
     }
     else
     {
-        cout << "Вы ввели слишком маленькое чило.";
+        cout << "Вы ввели слишком маленькое число.";
         compare(secret, cnt);
     }
 }
