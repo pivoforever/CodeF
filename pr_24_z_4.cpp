@@ -7,7 +7,7 @@
 
 using namespace std;
 
-bool simple(int, int d=2);
+bool simple(int, int d = 2);
 
 int main(int argc, char const *argv[])
 {
@@ -17,9 +17,9 @@ int main(int argc, char const *argv[])
     int n;
     cin >> n;
     if (simple(n))
-    cout << "Число простое";
+        cout << "Число простое";
     else
-    cout << "Число составное";
+        cout << "Число составное";
     return 0;
 }
 
