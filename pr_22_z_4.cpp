@@ -7,7 +7,7 @@
 
 using namespace std;
 
-void summAndMultFunc(int, int, ...);
+void summAndMultFunc(int x=5, int y=10, ...);
 
 int main(int argc, char const *argv[])
 {
@@ -16,11 +16,12 @@ int main(int argc, char const *argv[])
     // SetConsoleOutputCP(1251);
     int x, y;
     cout << "Введите через пробел два числа, которые нужно просуммировать:" << endl;
-    summAndMultFunc(15, 20, 5, 7, 2, 0);
+    //summAndMultFunc(15, 20, 5, 7, 2, 0);
+    summAndMultFunc();
     return 0;
 }
 
-void summAndMultFunc(int x = 5, int y = 10, ...)
+void summAndMultFunc(int x, int y, ...)
 {
     cout << "Сумма первых двух чисел: " << x + y << endl;
     int *ptr = &y;
