@@ -16,19 +16,23 @@ int main(int argc, char const *argv[])
     // SetConsoleCP(1251);
     // SetConsoleOutputCP(1251);
     int k;
-    cin>>k;
-    cout<<(F(k)+G(k));
+    cin >> k;
+    cout << (F(k) + G(k));
     return 0;
 }
 
 int F(int n)
 {
-    if (n==1) return 1;
-    else return G(n-1)+n;
+    if (n == 1)
+        return 1;
+    else
+        return G(n - 1) + n;
 }
 
 int G(int n)
 {
-    if (n==1) return 1;
-    else return F(n-1)*n;
+    if (n == 1)
+        return 1;
+    else
+        return F(n - 1) * n;
 }
