@@ -16,11 +16,7 @@ int main(int argc, char const *argv[])
     // SetConsoleOutputCP(1251);
     int x, y;
     cout << "Введите через пробел два числа, которые нужно просуммировать:" << endl;
-<<<<<<< HEAD
-    //summAndMultFunc(40, 50, 5, 7, 2, 2,5, 0);
-=======
-    //summAndMultFunc(15, 20, 5, 7, 2, 0);
->>>>>>> 9ec0ed4b26afc03e57f7456d5db11e67ac56c15a
+    summAndMultFunc(40, 50, 5, 7, 2, 2,5, 0);
     summAndMultFunc();
     return 0;
 }
