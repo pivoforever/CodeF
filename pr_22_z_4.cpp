@@ -7,11 +7,7 @@
 
 using namespace std;
 
-<<<<<<< HEAD
-void summAndMultFunc(int x=15, int y=20, ...);
-=======
 void summAndMultFunc(int x=5, int y=10, ...);
->>>>>>> 9ec0ed4b26afc03e57f7456d5db11e67ac56c15a
 
 int main(int argc, char const *argv[])
 {
