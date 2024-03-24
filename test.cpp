@@ -6,12 +6,6 @@ using namespace std;
 
 int main()
 {
-    vector<string> msg {"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"};
-    int i=0;
-    for (const string& word : msg)
-    {
-        cout << word << " ";
-        i++;
-    }
-    cout << endl;
+    int m[]={7,2,5,4,6,3,8,5,4};
+    cout<<size(m)<<endl;
 }
