@@ -8,39 +8,43 @@
 
 using namespace std;
 
-template <class Data> // type – это имя параметризируемого типа
-void print(Data a[], int size)
+double myMax(double a, double b)
 {
-    for (int i = 0; i < size; i++)
-    {
-        cout<<a[i]<<"\t";
-    }
-    cout << endl;
+    return (a >= b ? a : b);
+}
+
+int myMax(int a, int b)
+{
+    return (a >= b ? a : b);
 }
 
 int main(int argc, char const *argv[])
 {
     setlocale(LC_ALL, "Russian");
+    setlocale(LC_NUMERIC, "eng");
     // SetConsoleCP(1251);
     // SetConsoleOutputCP(1251);
-    int size;
-    cout << "Введите размер массива:\n";
-    cin >> size;
-    int *a = new int[size];
-    cout << "Введите целые чила для массива:\n";
-    for (int i = 0; i < size; i++)
+    string s1, s2;
+    int a, b;
+    double x, y;
+    cout << "Введите два числа через пробел:\n";
+    cin >> s1;
+    cin >> s2;
+    if ((s1.find(".") != string::npos) || (s2.find(".") != string::npos))
     {
-        cin >> a[i];
+        x = stod(s1);
+        y = stod(s2);
+        double res = myMax(x, y);
+        cout << res;
     }
-    print(a, size);
-    cout << "Введите размер массива:\n";
-    cin >> size;
-    double *b = new double[size];
-    cout << "Введите вещественные чила для массива:\n";
-    for (int i = 0; i < size; i++)
+    else
     {
-        cin >> b[i];
+        a = stoi(s1);
+        b = stoi(s2);
+        int res = myMax(a, b);
+        cout << res;
     }
-    print(b, size);
+    cin.get();
+    cin.get();
     return 0;
 }
