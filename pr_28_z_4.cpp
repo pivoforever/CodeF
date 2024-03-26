@@ -11,14 +11,18 @@ using namespace std;
 
 int main()
 {
+    setlocale(LC_ALL, "Russian");
+    setlocale(LC_NUMERIC, "eng");
+    //SetConsoleCP(1251);
+    //SetConsoleOutputCP(1251);
     int a,b;
     char ch;
-    cout << "Введите через пробел два числа:" << endl;
+    cout << "??????? ??? ????? ????? ??????:" << endl;
     cin >> a;
     cin >> b;
-    while (1) // бесконечный цикл
+    while (1)
     {
-        cout << "\n Введите +, - или *: ";
+        cout << "\n ???????? +, - ??? ??? *: ";
         cin >> ch;
         if (ch == '+')
         {
@@ -34,7 +38,7 @@ int main()
         }
 
         else
-            return 0; // вызов функции с номером n
+            return 0;
     }
     cin.get();
     cin.get();
