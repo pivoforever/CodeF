@@ -6,7 +6,7 @@ using namespace std;
 
 void printUser(user *user)
 {
-    cout << "Имя:\t" << user->name <<"\t Фамилия:\t" << user->surname <<"\t Возраст:\t" << user->age << endl;
+    cout << "Name:\t\t" << user->name <<"\t\t Surname:\t\t" << user->surname <<"\t\t Age:\t\t" << user->age << endl;
 }
 
 void addUser(user allUser[], int &size, string name, string sername, int age)
@@ -44,6 +44,6 @@ void deleteUser(user allUser[], int &size, string name)
     }
     else
     {
-        cout << "Такого имени нет в списке.";
+        cout << "The name isn't in list.";
     }
 }
