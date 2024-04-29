@@ -40,6 +40,6 @@ int main(int argc, char const *argv[])
     test.setB(2.3);
     cout << "Введите x:" << endl;
     cin >> x;
-    cout << "Результат перегрузки (): " << (test(x));
+    cout << "Результат перегрузки (): " << test(x);
     return 0;
 }

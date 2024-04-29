@@ -24,14 +24,21 @@ public:
         data = s;
     }
 
-    double operator[](int index)
+    int operator[](int index)
     {
         int cnt=0, i=0;
+        string ans="";
         while (cnt<index)
         {
             if(data[i]==' ') cnt++;
+            i++;
         }
-        return a * x + b;
+        while (data[i]!=' ')
+        {
+            ans+=data[i];
+            i++;
+        }
+        return stoi(ans);
     }
 };
 
@@ -41,12 +48,11 @@ int main(int argc, char const *argv[])
     setlocale(LC_NUMERIC, "eng");
     // SetConsoleCP(1251);
     // SetConsoleOutputCP(1251);
-    Function test;
-    double x;
-    test.setA(10.5);
-    test.setB(2.3);
-    cout << "Введите x:" << endl;
-    cin >> x;
-    cout << "Результат перегрузки (): " << (test(x));
+    Array test;
+    test.setSize(5);
+    test.setData("1 45 3 15 5");
+    cout << "Значение test[0]: " << test[0]<<endl;
+    cout << "Значение test[3]: " << test[3]<<endl;
+    cout << "Значение test[4]: " << test[4]<<endl;
     return 0;
 }
